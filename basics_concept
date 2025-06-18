@@ -1,0 +1,85 @@
+class Car {
+    //properties
+    String brand;
+    String color;
+    int speed;
+    int average;
+    double engine;
+    int seating;
+    double price;
+    boolean sunRoof;
+    
+    //methods,functionalties,behaviors
+        void drive() {
+        System.out.println("Drive......");
+    }
+
+    void rDrive() {
+        System.out.println("Reverse Drive......");
+    }
+
+    void offroading() {
+        System.out.println("offroading");
+    }
+
+    void brake() {
+        System.out.println("Applying Brake");
+    }
+
+    void horn() {
+        System.out.println("Applying horn......");
+    }
+
+    void indicator(String s) {
+        if (s.equals("left")) {
+            System.out.println("Left indicator");
+        } else if (s.equals("right")) {
+            System.out.println("Right indicator");
+        } else {
+            System.out.println("Invalid direction");
+        }
+    }
+
+    void parking() {
+        System.out.println("Park the Car");
+    }
+
+    void details() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Color: " + color);
+        System.out.println("Speed: " + speed);
+        System.out.println("Average: " + average);
+        System.out.println("Engine: " + engine);
+        System.out.println("Seating: " + seating);
+        System.out.println("Price: ₹" + price);
+        //System.out.println("Sunroof: " + (sunRoof ? "Yes" : "No"));
+        if (sunRoof) {
+            System.out.println("Sunroof: Yes");
+        } else {
+            System.out.println("Sunroof: No");
+        }
+
+}
+}
+public class Main{
+    public static void main(String[] args){
+     Car alto = new Car();
+     alto.brand ="Alto 800";
+     alto.color ="While";
+     alto.speed =120;
+     alto.average=18;
+     alto.seating=4;
+     alto.price =3.54;
+     alto.sunRoof=false;
+     alto.engine=796.5;
+     alto.details();
+     alto.drive();
+     alto.rDrive();
+     alto.offroading();
+     alto.brake();
+     alto.horn();
+     alto.indicator("left");
+     
+        
+    }
+}
