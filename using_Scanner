@@ -1,0 +1,123 @@
+import java.util.Scanner;
+
+class Car {
+    //properties
+    String brand;
+    String color;
+    int speed;
+    int average;
+    double engine;
+    int seating;
+    double price;
+    boolean sunRoof;
+    public static void print(String s){
+        System.out.println(s);
+    }
+    
+    //methods,functionalties,behaviors
+        void drive() {
+        print("Drive......");
+    }
+
+    void rDrive() {
+    print("Reverse Drive......");
+    }
+
+    void offroading() {
+    print("offroading");
+    }
+
+    void brake() {
+    print("Applying Brake");
+    }
+
+    void horn() {
+    print("Applying horn......");
+    }
+
+    void indicator(String s) {
+        if (s.equals("left")) {
+        print("Left indicator");
+        } else if (s.equals("right")) {
+        print("Right indicator");
+        } else {
+        print("Invalid direction");
+        }
+    }
+
+    void parking() {
+        System.out.println("Park the Car");
+    }
+
+    void details() {
+        print("Brand: " + brand);
+        print("Color: " + color);
+        print("Speed: " + speed);
+        print("Average: " + average);
+        print("Engine: " + engine);
+        print("Seating: " + seating);
+        print("Price: ₹" + price);
+        //System.out.println("Sunroof: " + (sunRoof ? "Yes" : "No"));
+        if (sunRoof) {
+            print("Sunroof: Yes");
+        } else {
+            print("Sunroof: No");
+        }
+         
+    }
+     Scanner sc = new Scanner(System.in);
+     void fillDetails(){
+         print("brand->");
+         brand=sc.nextLine();
+         
+         print("Color->");
+         color=sc.nextLine();
+         
+         print("Speed->");
+         speed=sc.nextInt();
+         
+         print("Average->");
+         average=sc.nextInt();
+         
+         print("Engine->");
+         engine=sc.nextDouble();
+         
+         print("Seating->");
+         seating=sc.nextInt();
+         
+         print("Price->");
+         price=sc.nextDouble();
+         
+         print("sunRoof");
+         sunRoof=sc.nextBoolean();
+     }
+}
+public class Main{
+    
+    public static void main(String[] args){
+    /* Car alto = new Car();
+     alto.brand ="Alto 800";
+     alto.color ="While";
+     alto.speed =120;
+     alto.average=18;
+     alto.seating=4;
+     alto.price =3.54;
+     alto.sunRoof=false;
+     alto.engine=796.5;
+     
+     alto.details();
+
+     alto.drive();
+     alto.rDrive();
+     alto.offroading();
+     alto.brake();
+     alto.horn();
+     alto.indicator("left"); */
+     
+     Car celerio = new Car();
+     celerio.fillDetails();
+     celerio.details();
+     
+        
+    }
+}
